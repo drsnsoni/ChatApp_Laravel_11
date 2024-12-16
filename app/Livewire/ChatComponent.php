@@ -52,9 +52,9 @@ class ChatComponent extends Component
         $this->message = '';
     }
 
-    #[On('echo-private:chat-channel.{sender_id}, MessageSendEvent')]
+    #[On('echo-private::chat-channel.{sender_id}, MessageSenndEvent')]
     public function listenForMessage($event){
-        dd('a');
+
         $chatMessage = Message::whereId($event['message']['id'])
                                 ->with('sender:id,name', 'receiver:id,name')
                                 ->first();

@@ -38,10 +38,11 @@
                         </div>
                       @endif
                       @endforeach
+                  </div>
                   <!-- Input Container -->
                   <div class="input-group mt-3">
                     <form wire:submit='sendMessage()'>
-                      <input type="text" class="form-control" wire:model='message' placeholder="Type your message...">
+                      <input type="text" wire:model='message' placeholder="Type your message...">
                       <button class="btn btn-primary">
                           Send
                       </button>
